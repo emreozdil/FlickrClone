@@ -8,20 +8,28 @@
 
 import UIKit
 
+var photos: [FlickrPhoto] = []
 class TimelineTableViewController: UITableViewController {
 
-
     
+    
+    var refresher: UIRefreshControl!
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        ApiOperation().getRecent()
+        while photos.count != 10 {
+            
+        }
+        self.tableView.reloadData()
         
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
     }
 
     // MARK: - Table view data source
@@ -33,14 +41,17 @@ class TimelineTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 4
+        return photos.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PostTableViewCell
+        
+        //cell.userProfilephoto.image = photos[indexPath.row].profilePhoto
+        //cell.photo.image = photos[indexPath.row].photo
+        cell.username.text = photos[indexPath.row].realname
+        cell.photoDate.text = photos[indexPath.row].dates
 
         return cell
     }

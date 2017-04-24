@@ -14,6 +14,8 @@
 		9ACFEED61EADF999003C0192 /* person.png in Resources */ = {isa = PBXBuildFile; fileRef = 9ACFEED51EADF999003C0192 /* person.png */; };
 		9ACFEEDA1EADFA5B003C0192 /* TimelineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACFEED91EADFA5B003C0192 /* TimelineTableViewController.swift */; };
 		9ACFEEDC1EADFE57003C0192 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACFEEDB1EADFE57003C0192 /* PostTableViewCell.swift */; };
+		9ACFEEDE1EAE0DB9003C0192 /* FlickrPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACFEEDD1EAE0DB9003C0192 /* FlickrPhoto.swift */; };
+		9ACFEEE01EAE444C003C0192 /* ApiOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACFEEDF1EAE444C003C0192 /* ApiOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		9ACFEED51EADF999003C0192 /* person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = person.png; sourceTree = "<group>"; };
 		9ACFEED91EADFA5B003C0192 /* TimelineTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimelineTableViewController.swift; path = ../TimelineTableViewController.swift; sourceTree = "<group>"; };
 		9ACFEEDB1EADFE57003C0192 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostTableViewCell.swift; path = ../PostTableViewCell.swift; sourceTree = "<group>"; };
+		9ACFEEDD1EAE0DB9003C0192 /* FlickrPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrPhoto.swift; sourceTree = "<group>"; };
+		9ACFEEDF1EAE444C003C0192 /* ApiOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 			children = (
 				9ACFEEC31EADF501003C0192 /* AppDelegate.swift */,
 				9ACFEED91EADFA5B003C0192 /* TimelineTableViewController.swift */,
+				9ACFEEDD1EAE0DB9003C0192 /* FlickrPhoto.swift */,
+				9ACFEEDF1EAE444C003C0192 /* ApiOperation.swift */,
 				9ACFEEDB1EADFE57003C0192 /* PostTableViewCell.swift */,
 				9ACFEEC71EADF501003C0192 /* Main.storyboard */,
 				9ACFEECA1EADF501003C0192 /* Assets.xcassets */,
@@ -145,7 +151,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9ACFEEDA1EADFA5B003C0192 /* TimelineTableViewController.swift in Sources */,
+				9ACFEEDE1EAE0DB9003C0192 /* FlickrPhoto.swift in Sources */,
 				9ACFEEC41EADF501003C0192 /* AppDelegate.swift in Sources */,
+				9ACFEEE01EAE444C003C0192 /* ApiOperation.swift in Sources */,
 				9ACFEEDC1EADFE57003C0192 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

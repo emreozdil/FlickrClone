@@ -10,10 +10,10 @@ import UIKit
 
 class PostTableViewCell: UITableViewCell {
 
-    @IBOutlet var userProfilePicture: UIImageView!
+    @IBOutlet var userProfilephoto: UIImageView!
     @IBOutlet var username: UILabel!
-    @IBOutlet var pictureDate: UILabel!
-    @IBOutlet var picture: UIImageView!
+    @IBOutlet var photoDate: UILabel!
+    @IBOutlet var photo: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

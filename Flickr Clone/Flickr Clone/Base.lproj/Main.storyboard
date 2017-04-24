@@ -27,10 +27,10 @@
                                 <rect key="frame" x="0.0" y="72" width="375" height="375"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HFc-HK-Ij6" id="mGl-aw-xrJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="374.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.png" translatesAutoresizingMaskIntoConstraints="NO" id="44c-73-SCt">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.png" translatesAutoresizingMaskIntoConstraints="NO" id="44c-73-SCt">
                                             <rect key="frame" x="0.0" y="54" width="375" height="300"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -48,17 +48,17 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.png" translatesAutoresizingMaskIntoConstraints="NO" id="87P-IR-PfO">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.png" translatesAutoresizingMaskIntoConstraints="NO" id="87P-IR-PfO">
                                             <rect key="frame" x="22" y="5" width="43" height="32"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="picture" destination="44c-73-SCt" id="r58-QK-bex"/>
-                                    <outlet property="pictureDate" destination="7Mz-vK-XgC" id="9aJ-he-GFc"/>
-                                    <outlet property="userProfilePicture" destination="87P-IR-PfO" id="jZW-BW-0El"/>
-                                    <outlet property="username" destination="EJj-pV-Dc4" id="srz-a6-4Uf"/>
+                                    <outlet property="photo" destination="44c-73-SCt" id="q0e-rj-7yV"/>
+                                    <outlet property="photoDate" destination="7Mz-vK-XgC" id="nCc-Zz-TZx"/>
+                                    <outlet property="userProfilephoto" destination="87P-IR-PfO" id="m7L-yP-1CK"/>
+                                    <outlet property="username" destination="EJj-pV-Dc4" id="YpA-lc-Jsa"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
