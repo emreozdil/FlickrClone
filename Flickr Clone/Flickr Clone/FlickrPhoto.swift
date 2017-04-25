@@ -31,9 +31,33 @@ class FlickrPhoto {
         self.iconserver = iconserver
         self.realname = realname
         self.dates = dates
+        var photoUrl: String {
+            return String("https://farm\(farm).staticflickr.com/\(server)/\(photoId)_\(secret)_m.jpg")!
+        }
+        let urlPhoto = URL(string: photoUrl)!
         
-        /*
-        let urlProfilePhoto = URL(string: "https://farm" + farm + ".staticflickr.com/" + server + "/" + photoId + "_" + secret + "_n.jpg")!
+        let requestPhoto = NSMutableURLRequest(url: urlPhoto)
+        
+        let taskPhoto = URLSession.shared.dataTask(with: requestPhoto as URLRequest) { (data, response, error) in
+            if error != nil {
+                print(error!)
+            }
+            else {
+                if let data = data {
+                    if let tempPhoto = UIImage(data: data) {
+                        self.photo = tempPhoto
+                    }
+                }
+                
+            }
+        }
+        taskPhoto.resume()
+
+        var profilePhotoUrl: String {
+            return String("https://farm\(iconfarm).staticflickr.com/\(iconserver)/buddyicons/\(nsid).jpg")!
+            
+        }
+        let urlProfilePhoto = URL(string: profilePhotoUrl)!
         let requestProfilePhoto = NSMutableURLRequest(url: urlProfilePhoto)
         let taskProfilePhoto = URLSession.shared.dataTask(with: requestProfilePhoto as URLRequest) { (data, response, error) in
             if error != nil {
@@ -49,33 +73,7 @@ class FlickrPhoto {
             }
         }
         taskProfilePhoto.resume()
-        let urlPhoto = URL(string: "https://farm" + iconfarm + ".staticflickr.com/" + iconserver + "/buddyicons/" + nsid + ".jpg")!
-        let requestPhoto = NSMutableURLRequest(url: urlPhoto)
-        
-        let taskPhoto = URLSession.shared.dataTask(with: requestPhoto as URLRequest) { (data, response, error) in
-            if error != nil {
-                print(error!)
-            }
-            else {
-                if let data = data {
-                    if let photo = UIImage(data: data) {
-                        self.photo.image = photo
-                    }
-                }
-                
-            }
-        }
-        taskPhoto.resume()
-    */
     }
-    /*
-    var photoUrl: String {
-        return "https://farm" + farm + ".staticflickr.com/" + server + "/" + photoId + "_" + secret + "_n.jpg"
-    }
-    var profilePhotoUrl: String {
-        return "https://farm" + iconfarm + ".staticflickr.com/" + iconserver + "/buddyicons/" + nsid + ".jpg"
-    }
-     */
     
     func timeAgoSinceDate(numericDates:Bool = false) -> String {
         let dateStringUTC = self.dates

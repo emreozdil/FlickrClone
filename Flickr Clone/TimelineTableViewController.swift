@@ -50,8 +50,8 @@ class TimelineTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PostTableViewCell
         
-        //cell.userProfilephoto.image = photos[indexPath.row].profilePhoto
-        //cell.photo.image = photos[indexPath.row].photo
+        cell.userProfilephoto.image = photos[indexPath.row].profilePhoto
+        cell.photo.image = photos[indexPath.row].photo
         cell.username.text = photos[indexPath.row].realname
         cell.photoDate.text = photos[indexPath.row].timeAgoSinceDate()
 
