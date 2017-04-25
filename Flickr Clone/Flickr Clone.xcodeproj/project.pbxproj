@@ -43,6 +43,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9AAE315A1EAF26BA000752A6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9ACFEEDD1EAE0DB9003C0192 /* FlickrPhoto.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9AAE315B1EAF26C8000752A6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9ACFEED91EADFA5B003C0192 /* TimelineTableViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		9AAE315C1EAF26DA000752A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9ACFEEDB1EADFE57003C0192 /* PostTableViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		9AAE315D1EAF2710000752A6 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				9ACFEEDF1EAE444C003C0192 /* ApiOperation.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
 		9ACFEEB71EADF501003C0192 = {
 			isa = PBXGroup;
 			children = (
@@ -62,11 +94,11 @@
 		9ACFEEC21EADF501003C0192 /* Flickr Clone */ = {
 			isa = PBXGroup;
 			children = (
+				9AAE315D1EAF2710000752A6 /* Service */,
+				9AAE315A1EAF26BA000752A6 /* Model */,
+				9AAE315C1EAF26DA000752A6 /* View */,
+				9AAE315B1EAF26C8000752A6 /* Controller */,
 				9ACFEEC31EADF501003C0192 /* AppDelegate.swift */,
-				9ACFEED91EADFA5B003C0192 /* TimelineTableViewController.swift */,
-				9ACFEEDD1EAE0DB9003C0192 /* FlickrPhoto.swift */,
-				9ACFEEDF1EAE444C003C0192 /* ApiOperation.swift */,
-				9ACFEEDB1EADFE57003C0192 /* PostTableViewCell.swift */,
 				9ACFEEC71EADF501003C0192 /* Main.storyboard */,
 				9ACFEECA1EADF501003C0192 /* Assets.xcassets */,
 				9ACFEED51EADF999003C0192 /* person.png */,
@@ -318,6 +350,7 @@
 				9ACFEED41EADF501003C0192 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

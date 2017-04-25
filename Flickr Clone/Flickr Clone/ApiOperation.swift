@@ -69,7 +69,8 @@ class ApiOperation {
                         let realname = ownerInfo?["realname"] as! String
                         let iconserver = ownerInfo?["iconserver"] as! String
                         let iconfarm = ownerInfo?["iconfarm"] as! Int
-                        let dates = datesInfo?["taken"] as! String
+                        let rawDates = datesInfo?["taken"] as! String
+                        let dates = String(describing: rawDates) + " +0000"
                         let flickrPhoto = FlickrPhoto(photoId: id, nsid: nsid, farm: farm, iconfarm: iconfarm, secret: secret, server: server, iconserver: iconserver, realname: realname, dates: dates)
                         photos.append(flickrPhoto)
                     }

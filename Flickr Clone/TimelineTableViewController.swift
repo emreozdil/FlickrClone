@@ -17,9 +17,11 @@ class TimelineTableViewController: UITableViewController {
     
 
     override func viewDidLoad() {
+        tableView.delegate = self
+        tableView.dataSource = self
         super.viewDidLoad()
         ApiOperation().getRecent()
-        while photos.count != 10 {
+        while photos.count != 100 {
             
         }
         self.tableView.reloadData()
@@ -51,7 +53,7 @@ class TimelineTableViewController: UITableViewController {
         //cell.userProfilephoto.image = photos[indexPath.row].profilePhoto
         //cell.photo.image = photos[indexPath.row].photo
         cell.username.text = photos[indexPath.row].realname
-        cell.photoDate.text = photos[indexPath.row].dates
+        cell.photoDate.text = photos[indexPath.row].timeAgoSinceDate()
 
         return cell
     }
