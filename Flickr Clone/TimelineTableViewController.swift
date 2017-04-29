@@ -15,17 +15,37 @@ class TimelineTableViewController: UITableViewController {
     
     var refresher: UIRefreshControl!
     
+    func refresh() {
+        if photos.count == 0 {
+            ApiOperation().getRecent()
+            while photos.count != 20 {
+            }
+            self.tableView.reloadData()
+            //self.refresher.endRefreshing()
+        }
+        else {
+            photos.removeAll()
+            ApiOperation().getRecent()
+            while photos.count != 20 {
+            }
+            self.tableView.reloadData()
+            self.refresher.endRefreshing()
+        }
+        
+    }
 
     override func viewDidLoad() {
-        tableView.delegate = self
-        tableView.dataSource = self
         super.viewDidLoad()
-        ApiOperation().getRecent()
-        while photos.count != 100 {
-            
-        }
-        self.tableView.reloadData()
         
+        refresh()
+        
+        refresher = UIRefreshControl()
+        
+        refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        
+        refresher.addTarget(self, action: "refresh", for: UIControlEvents.valueChanged)
+        
+        tableView.addSubview(refresher)
     }
 
     override func didReceiveMemoryWarning() {

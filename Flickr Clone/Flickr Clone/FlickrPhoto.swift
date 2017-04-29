@@ -54,7 +54,7 @@ class FlickrPhoto {
         taskPhoto.resume()
 
         var profilePhotoUrl: String {
-            return String("https://farm\(iconfarm).staticflickr.com/\(iconserver)/buddyicons/\(nsid).jpg")!
+            return String("http://farm\(iconfarm).staticflickr.com/\(iconserver)/buddyicons/\(nsid).jpg")!
             
         }
         let urlProfilePhoto = URL(string: profilePhotoUrl)!
